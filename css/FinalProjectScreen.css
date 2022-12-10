@@ -1,0 +1,188 @@
+*{
+    box-sizing: border-box;
+}
+/* For mobile phones: */
+@media  only screen and (max-width: 600px)
+{
+.grid-container{
+    display:grid;
+    grid-template-areas:
+      'header header'
+      'menu menu' 
+      'footer footer'
+      ;
+}
+}
+/* For tablets: */
+@media only screen and (min-width: 600px) {
+    .grid-container{
+    display:grid;
+    grid-template-areas:
+    'header header header'
+    'menu menu menu'
+    'footer footer footer';
+    }
+}
+/* For desktop: */
+@media only screen and (min-width: 768px) {
+    .grid-container {
+
+        display: grid;
+        grid-template-areas:
+        'header header header'
+        'menu menu menu'
+        'menu menu menu'
+        'menu menu menu'
+        'footer footer footer';
+          ;
+   
+    }
+}
+.header{ grid-area: header; }
+.menu { grid-area: menu; }
+.footer { grid-area: footer; }
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    color: rgb(236, 242, 244);
+    font-weight: 300;
+    font-weight: bolder;
+}
+header{
+    background-color: rgb(251, 211, 238);
+    border-radius: 20px;
+    text-align: center;
+    opacity: 0.8;
+    
+}
+section{
+    align-items: center;
+    width: 100%;
+}
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(155, 11, 83);
+    font-size: 40px;
+    text-shadow: 20px;
+}
+a:link{
+    color: blueviolet;
+    text-decoration: dotted;
+    text-indent: 20px;
+    font-weight: bolder;
+}
+a:hover{
+    color: rgb(247, 2, 137);
+    text-decoration: underline;
+    background-color: rgb(143, 195, 199);
+}
+a:active{
+    color: rgb(127, 245, 190);
+    text-decoration: solid;
+}
+h2{
+    color: rgb(239, 11, 144);
+    font-size: 15px;
+    text-shadow: 5px;
+    width: 40%;
+    background-color: rgb(57, 196, 163);
+    padding: 5px;
+    border-radius: 20px;
+}
+h3{
+        color: rgb(247, 244, 246);
+        font-size: 15px;
+        text-shadow: 5px;
+        width: 30%;
+        background-color: lightseagreen;
+        padding: 5px;
+        border-radius: 20px;
+}
+h2:hover,h3:hover{
+    transform: translate(15px);
+    background: rgb(88, 5, 68);
+    transition: .5s ease-in-out;
+}
+nav {
+	margin:50px auto; 
+	text-align: center;
+    opacity: 0.9;
+    width: 100%;
+}
+nav img{
+    max-width: 100%;
+}
+nav ul {
+    background: linear-gradient(0deg, rgb(228, 216, 227), rgb(205, 231, 239), rgb(228, 216, 227)); 
+	box-shadow: 6px 6px 6px rgba(9, 66, 31, 0.345);
+	padding: 0 20px;
+	border-radius: 10px;  
+	list-style: none;
+	position: relative;
+	color:black;
+	font-weight:900;
+   
+	width:100%;
+	display:inline-table;
+    transition: .5s ease-in-out;
+}
+nav ul li {
+    display: none;
+}
+nav ul li a {
+	display: block; 
+	padding: 25px 40px;
+	color:#808080; 
+	text-decoration: none;
+}
+nav ul:hover > li {
+    display:inline-table;
+    /* background: lightseagreen;
+    border-radius: 20px; */    
+}
+nav li:hover a {
+	color: rgb(239, 11, 144);
+}
+nav ul li:hover > ul {
+	display:flex;
+	flex-direction:column;
+	width:30%;
+}
+	
+nav ul ul li {
+	display:block; 
+	border-top: 1px solid #757575;
+	border-bottom: 1px solid #757575; 
+	position: relative;
+}
+nav ul ul li a {
+	padding: 15px 40px;
+	color: #757575;
+}	
+nav ul li a:hover {
+	background: rgb(107, 21, 130);
+	color:rgb(219, 214, 219);
+}
+footer{
+    margin-top:200px;
+}
+.icon-bar {
+    width: 100%; 
+    background-color: rgb(109, 66, 35);
+    overflow: auto;
+}
+
+.icon-bar a {
+    float: left; 
+    text-align: center; 
+    width: 20%; 
+    padding: 12px 0; 
+    transition: all 0.3s ease; 
+    color: white; 
+    font-size: 36px; 
+}
+
+.icon-bar a:hover {
+    background-color: rgb(41, 3, 107); 
+}
